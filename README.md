@@ -2,14 +2,14 @@
 
 Function for KoLmafia scripts to make `<select>` HTML elements searchable on a given page. It does this by reading in a given page, then outputting the page modified to make use of [select2](https://select2.org/) to facilitate that.
 
-A repo with some already-made relay override scripts making use of this for a few pages can be found here: http://github.com/C2Talon/insertSelect2-relays/
+A repo with some already-made relay override scripts making use of this for a few pages can be found here: https://github.com/donCannoli-burns/don_insertSelect2-relays
 
 ## Installation
 
 Can be installed from KoLmafia's CLI via:
 
 ```
-git checkout https://github.com/C2Talon/insertSelect2.git
+git checkout https://github.com/donCannoli-burns/don_insertSelect2.git
 ```
 
 ## Usage
@@ -66,3 +66,15 @@ module.exports.main = function (page_text_encoded)
 }
 ```
 
+## Fork provenance and compatibility
+
+This repository is a fork of [C2Talon's insertSelect2](https://github.com/C2Talon/insertSelect2), which provides the original function and usage pattern. See the upstream project for original credit and documentation. The example installation command above installs **this fork**; the linked [relay overrides](https://github.com/donCannoli-burns/don_insertSelect2-relays) are a separate optional checkout.
+
+In [don_custom_functions](https://github.com/donCannoli-burns/don_custom_functions), the `don_relay_select2.ash` HTML class-tagging helper is **not** a drop-in replacement for the complete Select2 frontend provided by this script.
+
+## Related maintained KoLmafia / ASH projects
+
+- [don-ash-lib](https://github.com/donCannoli-burns/don-ash-lib) — reusable import-safe ASH utilities.
+- [don_custom_functions](https://github.com/donCannoli-burns/don_custom_functions) — runnable KoLmafia ASH commands and related relay integration.
+
+These are **separate repositories**, not implicit dependencies installed by this fork. The standalone retirement program for `boneFarm`, `boneTrack.ash`, and `codMaster` is documented at [Retired-KOL-Scripts](https://github.com/donCannoli-burns/Retired-KOL-Scripts). This fork is **not** one of those three retiring scripts.
